@@ -15,7 +15,7 @@ This web application will allow people to obtain information about the hospitals
 
 ## Demo
 ### Main page 
-<img src = "![home_page](https://user-images.githubusercontent.com/60619989/120829977-a7b15c80-c57b-11eb-9aca-05e4faafab93.png)" width="650" height="350">
+![home_page](https://user-images.githubusercontent.com/60619989/120829977-a7b15c80-c57b-11eb-9aca-05e4faafab93.png)
 
 
 ## Tech Stacks:
