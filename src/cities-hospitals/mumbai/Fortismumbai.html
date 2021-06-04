@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../../Archia/stylesheet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="hospital_page.css" />
+    <title>Vaccination system</title>
+  </head>
+  <body>
+    <div class="App">
+      <div class="modal fade" style="color:black;" id="getappointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Fill the form and get vaccinated !!!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <span id="form-submitted" style="color: green; text-align: center"></span>
+            <span id="form-failed" style="color: red; text-align: center" ></span>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="name">Fullname</label>
+                  <input type="text" class="form-control" id="name" placeholder="full-name">
+                </div>
+                <div class="form-group">
+                  <label for="vaccine">Vaccine</label>
+                  <select class="form-control" id="vaccine">
+                    <option>Covaxin</option>
+                    <option>Covidshield</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="mobno">Mobile no </label>
+                  <input type="text" class="form-control" id="mobno" placeholder="Enter 10 digit mobile no">
+                </div>
+                <div class="form-group">
+                  <label for="aadhaar">Aadhaar Number </label>
+                  <input type="text" class="form-control" id="aadhaar" placeholder="Enter 12 digit aadhaar no">
+                </div>
+                <div class="form-group">
+                  <label for="time">Select Time & Date</label><br/>
+                  <input id="time" type="time">
+                  <input id="date" type="date">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" id="submit_msg" class="btn btn-primary">Make appointment</button>
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-inverse navbar-expand-lg" id="navi">
+          <svg style="height: 3rem;" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="navbar-brand">Vaccine Information System</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" style="color: white;">
+              <a class="nav-link" href="../../../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cities
+              </a>
+              <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../delhi_hospitals.html">Delhi</a>
+                <a class="dropdown-item" href="../mumbai_hospitals.html">Mumbai</a>
+                <a class="dropdown-item" href="../chennai_hospitals.html">Chennai</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item" style="color:white;">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container" id="first-page">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 align-self-center" id="mainhead">
+            <h2 style="font-size: 40px; " data-aos="fade-right"><u>Fortis Hospital</u></h2><br/>
+            <img src="images/image001.jpg" style="height: 10rem;" /><br/>
+            <br/>
+            <p data-aos="fade-right">
+                Fortis Escort Hearts Hospital,<br/> Mulund Goregaon Link Rd, Nahur West, Industrial Area, Bhandup West,
+              <br/>Mumbai, Maharashtra 400078
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+            </svg>
+            <a data-aos="fade-right" href="tel:096060 47050">096060 47050</a>
+            <br /><br/>
+            <button
+              type="button"
+              class="btn"
+              style="background-color: #5cb85c; color: white;"
+              data-toggle="modal" data-target="#getappointment"
+            >
+              Book Appointment
+            </button>
+          </div>
+          <div class="col-12 col-md-6 align-self-center">
+            <h1 style="font-size: 32px;">Vaccines available</h1><br/>
+            <div class="row">
+              <div class="col-6">
+                <div class="card" data-aos="zoom-in" data-aos-duration="800"  style="color:black;">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Covaxin</b></h5>
+                    <p class="card-text d-none d-md-flex">
+                      -> COVAXIN® - India's First Indigenous COVID-19 Vaccine <br/>
+                      -> 2nd dose between 28-42 days<br/>
+                      -> 1st dose given 1000<br/>
+                      -> Fully vaccinated 256
+                    </p>
+                    <p class="card-text"><small class="text-muted">Available slots-232</small></p>
+                    <a href="../../vaccines_info/vacinfo.html">More info</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card" data-aos="zoom-in" data-aos-duration="800" style="color:black;">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Covidshield</b></h5>
+                    <p class="card-text d-none d-md-flex">
+                      -> The Oxford-AstraZeneca vaccine<br/>
+                      -> 2nd dose between 28-56 days<br/>
+                      -> 1st dose given 9343<br/>
+                      -> Fully vaccinated 4323
+                    </p>
+                    <p class="card-text"><small class="text-muted">Available slots-546</small></p>
+                    <a href="../../vaccines_info/vacinfo.html">More info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="column">
+            <h1 style="font-size: 32px;" data-aos="fade-up">About:</h1></br>
+            <p>
+                Fortis Hospital, Mulund is a 5 times JCI accredited, 315-bed multi-specialty tertiary care hospital providing a range of diagnostic and treatment services. With cutting edge technology, highly skilled and experienced surgeons and paramedical staff the Fortis Hospital at Mulund provides care with a patient-centric approach.
+
+This facility has Maharashtra’s largest transplant centre for multiorgan transplant. It is also the first in western India to have completed 100+ successive heart transplants in just 4 years
+            </p><br/>
+            <p>
+                Fortis Hospital has been on the forefront of fighting the pandemic, has successfully treated over 6000 patients infected with the virus. They have Proven protocol driven approach for safety of patients,stringent processes for infection control and Expertise and experience to handle both COVID and non-COVID successfully
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer w-100 d-flex justify-content-center">
+      <span>© 2021 <a href="#">Vaccine Information System</a></span>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+  <script type="text/javascript">
+    (function() {
+        var firebaseConfig = {
+        apiKey: "AIzaSyBPgd7nb48-c-BuBQcxsGBorR-Fc0Gckkw",
+        authDomain: "vaccine-information-system.firebaseapp.com",
+        projectId: "vaccine-information-system",
+        storageBucket: "vaccine-information-system.appspot.com",
+        messagingSenderId: "482924425365",
+        appId: "1:482924425365:web:234c90dd678a6dd62ceb9c",
+        measurementId: "G-NKY5ZTKG35"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      var push_to_firebase = function(data){
+        console.log("Thanks for sending a message. I'll try and get back to you as soon as possible.")
+        var db = firebase.firestore();
+
+        db.collection("appointment").add({
+            name: data["name"],
+            vaccine: data["vaccine"],
+            mobno: data["mobno"],
+            aadhaar:data["aadhaar"],
+            time: data["time"],
+            date: data["date"],
+            hospital: "Fortis Hospital (Mumbai)",
+            timestamp: Date.now()
+        })
+        .then(function(docRef) {
+            console.log("Message sent, ID: ", docRef.id);
+            document.getElementById("form-submitted").innerHTML="Yayy!! You are registered for vaccination!!";
+            document.getElementById("form-failed").innerHTML="";
+            setTimeout(function() {
+              document.getElementById("form-submitted").innerHTML="";
+              $("#getappointment").modal("toggle");
+            }, 5000);
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+            document.getElementById("form-failed").innerHTML="Sorry!! Try again!!";
+        });
+      }
+
+      var form_submit = function(){
+        var name = document.getElementById("name");
+        var vaccine = document.getElementById("vaccine");
+        var mobno = document.getElementById("mobno");
+        var aadhaar = document.getElementById("aadhaar");
+        var time = document.getElementById("time");
+        var date = document.getElementById("date");
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = yyyy + '-' + mm + '-' + dd;
+        if(name.value==="" || mobno.value.length!=10 || aadhaar.value.length!=12 || time.value==="" || date.value < today || date.value < today ){
+          //alert("Oops! Validation failed! Please check form details!");
+          console.log(name.value +" "+ mobno.value.length +" " + aadhaar.value.length +" "+ time.value+" "+ date.value);
+          var success = document.getElementById("form-submitted");
+          document.getElementById("form-failed").innerHTML="Oops! Validation failed! Please check form details!";
+          setTimeout(function() {
+            document.getElementById("form-failed").innerHTML="";
+          }, 5000);
+          return false;
+        }
+        var data = {
+          "name": name.value,
+          "vaccine": vaccine.value,
+          "mobno": mobno.value,
+          "aadhaar": aadhaar.value,
+          "time": time.value,
+          "date": date.value,
+        }
+        push_to_firebase(data);
+
+      }
+
+      document.getElementById("submit_msg").addEventListener("click", form_submit);
+    })();
+  </script>
+</html>

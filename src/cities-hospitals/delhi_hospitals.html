@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Vaccine Information System</title>
+  </head>
+  <body style="background-color: #4d4d4d;">
+    <style>
+      /* Style The Dropdown Button */
+      /*.dropbtn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }*/
+
+      /* The container <div> - needed to position the dropdown content*/
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 1.25rem;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 140px;
+        border-radius: 8px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        border-radius: 8px;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+        border-radius: 6px;
+      }
+    </style>
+
+    <header class="text-gray-600 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl" style="color: white;"
+            >Vaccine Information System</span
+          >
+        </a>
+        <nav
+          class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+          style="color: white;"
+        >
+          <a href="../../index.html" class="mr-5 hover:text-green-500">Home</a>
+
+          <div class="dropdown">
+            <button class="dropbtn">Cities</button>
+            <div class="dropdown-content">
+              <a href="#">Delhi</a>
+              <a href="mumbai_hospitals.html">Mumbai</a>
+              <a href="chennai_hospitals.html">Chennai</a>
+            </div>
+          </div>
+          <a href="/" class="mr-5 hover:text-green-500">About</a>
+          <a href="/" class="mr-5 hover:text-green-500">Contact Us</a>
+        </nav>
+        <a href="../vaccines_info/vacinfo.html"><button
+          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        >
+        Know more about vaccines
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button></a>
+      </div>
+    </header>
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1
+              class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+              style="color: white;"
+            >
+              Delhi
+            </h1>
+            <div class="h-1 w-20 bg-green-500 rounded"></div>
+          </div>
+          <p
+            style="color: #d9d9d9;"
+            add
+            class="lg:w-1/2 w-full leading-relaxed text-gray-500"
+          >
+            Hospitals and medical centres in Delhi battling the covid pandemic
+            and helping provide vaccines, medical care and guidance during these
+            difficult times.
+          </p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              <img
+                class="h-40 rounded w-full object-cover object-center mb-6"
+                src="https://images.unsplash.com/photo-1615631898182-0f6550dd2fbd?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODI3NTg1&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=720"
+                alt="content"
+              />
+              <h3
+                class="tracking-widest text-green-500 text-xs font-medium title-font"
+              >
+                ANSARI NAGAR
+              </h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                <a href="delhi/Safdarjunghospital.html"
+                  >Safdarjung Hospital</a
+                >
+              </h2>
+              <p class="leading-relaxed text-base">
+                This is a multi speciality hospital that is located in Ansari
+                Nagar and provides tertiary medical care to the entire capital
+                city of India. It is also one of the largest hospitals in the
+                country and is also a medical centre of learning
+              </p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              <img
+                class="h-40 rounded w-full object-cover object-center mb-6"
+                src="https://images.unsplash.com/photo-1613796446768-b7366aed3ac6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODQ5ODMz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=720"
+                alt="content"
+              />
+              <h3
+                class="tracking-widest text-green-500 text-xs font-medium title-font"
+              >
+                GURGAON
+              </h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                <a href="delhi/ArtemisHospital.html"
+                  >Artemis Hospital</a
+                >
+              </h2>
+              <p class="leading-relaxed text-base">
+                Artemis Hospital is a state-of-art multi-specialty hospital
+                located in Gurgaon, Haryana. This hospital is the first to
+                achieve JCI and NABH Accreditation in Gurgaon. It is one of the
+                most advanced hospitals in India.
+              </p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              <img
+                class="h-40 rounded w-full object-cover object-center mb-6"
+                src="https://images.unsplash.com/photo-1613763930486-385f4c774415?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODQ5OTYw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=720"
+                alt="content"
+              />
+              <h3
+                class="tracking-widest text-green-500 text-xs font-medium title-font"
+              >
+                AUROBINDO MARG
+              </h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                <a href="delhi/AIIMSHospital.html"
+                  >All India Institute of Medical Sciences(AIIMS)</a
+                >
+              </h2>
+              <p class="leading-relaxed text-base">
+                This hospital is one of the best in offering healthcare services
+                and treatment in the country. It consists of 1,766 beds that is
+                currently, the largest accommodation in the country. This
+                hospital also comes under the Ministry of Health and Family
+                Welfare. AIIMS Delhi is one of the 3,006 vaccination sites
+                across all states and UTs in India, where around 300 million
+                priority groups are scheduled to get vaccinated over the next
+                six months.
+              </p>
+            </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              <img
+                class="h-40 rounded w-full object-cover object-center mb-6"
+                src="https://clearmedi.in/wp-content/uploads/2019/08/IMG-10.jpg"
+                alt="content"
+              />
+              <h3
+                class="tracking-widest text-green-500 text-xs font-medium title-font"
+              >
+                VASANT KUNJ
+              </h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                <a href="delhi/FortisHospital.html"
+                  >Fortis Hospital</a
+                >
+              </h2>
+              <p class="leading-relaxed text-base">
+                Fortis Hospital, Vasant Kunj is among the top multi-specialty
+                hospitals across Delhi/NCR. It spans across an area of 1,50,000
+                sq. ft., providing India's finest and skilled medical service to
+                its patients. It is one of the NABH certified institute in Delhi
+                initiated with the primary aim of provided world class medical
+                facilities to patients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

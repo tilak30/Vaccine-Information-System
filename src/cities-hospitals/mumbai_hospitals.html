@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Vaccine Information System</title>
+</head>
+<body style="background-color:#001433;">
+
+
+    <style>
+        /* Style The Dropdown Button */
+        /*.dropbtn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }*/
+        
+        /* The container <div> - needed to position the dropdown content*/
+        .dropdown {
+          position: relative;
+          display: inline-block;
+          margin: 1.25rem;
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 140px;
+          border-radius: 8px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          border-radius: 8px;
+          display: block;
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+          background-color: #3e8e41;
+          border-radius: 6px;
+          
+        }
+        </style>
+    
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl" style="color: white;">Vaccine Information System</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" style="color: white;">
+            <a href="../../index.html"class="mr-5 hover:text-green-500">Home</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Cities</button>
+                <div class="dropdown-content">
+                  <a href="delhi_hospitals.html">Delhi</a>
+                  <a href="#">Mumbai</a>
+                  <a href="chennai_hospitals.html">Chennai</a>
+                </div>
+            </div>
+            <a href="/"class="mr-5 hover:text-green-500">About</a>
+            <a href="/"class="mr-5 hover:text-green-500">Contact Us</a>
+          </nav>
+          <a href="../vaccines_info/vacinfo.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Know more about vaccines
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button></a>
+        </div>
+      </header>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20">
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900" style="color: white;">Mumbai</h1>
+              <div class="h-1 w-20 bg-green-500 rounded"></div>
+            </div>
+            <p style="color: #d9d9d9;" add class="lg:w-1/2 w-full leading-relaxed text-gray-500">Hospitals and medical centres in Mumbai battling the covid pandemic and helping provide vaccines, medical care and guidance during these difficult times.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://edgemarkets-transferred.s3-ap-southeast-1.amazonaws.com/Fortis_0.jpg">
+                <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">NAHUR WEST</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4"><a href="mumbai/Fortismumbai.html">Fortis Hospital</a></h2>
+                <p class="leading-relaxed text-base">Fortis Hospital Mumbai , a 350-bed multi-specialty tertiary care centre. Fortis Hospital has been on the forefront of fighting the pandemic, has successfully treated over 6000 patients infected with the virus. Fortis Healthcare Ltd, one of India's leading private healthcare chains, has started Covid-19 vaccinations in at least nine hospitals/locations.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images.unsplash.com/photo-1613796446768-b7366aed3ac6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODQ5ODMz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=720" alt="content">
+                <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">BANDRA WEST</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4"><a href="mumbai/Lilavatihospital.html">Lilavati Hospital</a></h2>
+                <p class="leading-relaxed text-base"> Lilavati Hospital and Research Centre attends to nearly 300 In-patients and 1,500 Out-patients daily. They are a premier multi-specialty tertiary care hospital of India and have been acknowledged globally as the centre of medical excellence. It is strategically located, as it is easily accessible from all parts of Mumbai. </p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://images.unsplash.com/photo-1613763930486-385f4c774415?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE4ODQ5OTYw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=720" alt="content">
+                <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">MAHIM</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4"><a href="mumbai/Hindujahospital.html">Hinduja Hospital</a></h2>
+                <p class="leading-relaxed text-base">P. D. Hinduja Hospital, part of the Hinduja Group, is an ultra-modern tertiary care hospital with a Medical Research Centre. Hinduja Hospital is ranked the 6th best hospital in India, 3rd best among the private hospitals in India, best in Western India, best multi-speciality hospital in metros, and the cleanest hospital in Mumbai. </p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://clearmedi.in/wp-content/uploads/2019/08/IMG-10.jpg" alt="content">
+                <h3 class="tracking-widest text-green-500 text-xs font-medium title-font">NEW MARINE LINES</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4"><a href="mumbai/bombayhospital.html">Bombay Hospital</a></h2>
+                <p class="leading-relaxed text-base">Bombay Hospital is a tertiary care hospital with all specialities and super specialities under one roof performing entire range of diagnostic, therapeutic and interventional procedures. Bombay Hospital is committed to patient care and patient safety. It presently ranks among the finest multi-speciality tertiary level medical centres in the country</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</body>
+</html>
+
+
+
+
