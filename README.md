@@ -4,6 +4,8 @@ The pandemic situation has taken over the world. With the invention and availabi
 
 This web application will allow people to obtain information about the hospitals in their local area providing vaccines. It will help track the inoculation process and allow people to book appointments to get vaccinated safely and with peace of mind.
 
+View live [here](https://tilak30.github.io/Vaccine-Information-System/)
+
 ## How to Use the Website:
 - Clone the GitHub repository
 ```
